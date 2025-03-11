@@ -498,10 +498,11 @@ button:active {
   /* Ensures that images fill the slide area while maintaining aspect ratio */
   .slide img {
     width: 100%; /* Image width matches the slide width */
-    height: 100%; /* Image height matches the slide height */
-    object-fit: cover; /* Images are scaled to cover the entire slide, cropping if necessary */
-    border-radius: 10px; /* Rounds the corners of the images to match the slider */
-  }
+    max-height: 100%; /* Image height matches the slide height */
+    object-fit:cover; /* Images are scaled to cover the entire slide, cropping if necessary */
+    border-radius: 20px 20px 0px 0px; /* Rounds the corners of the images to match the slider */
+    aspect-ratio: 16 / 9;
+}
   
   /* Common styling for both previous and next navigation buttons */
   .prev, .next {
@@ -771,7 +772,8 @@ footer {
 }
 
 
-.footer-rrss-section {
+.section-left-5 ul {
+    list-style: none;
     height: 40%;
     width: 100%;
     display: flex;
