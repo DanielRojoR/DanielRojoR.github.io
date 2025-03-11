@@ -454,7 +454,7 @@ button:active {
     border-radius:20px;
     top: 50%;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for depth */
-    margin: 75px 40px;
+    margin: 25px 5px;
   }
   
   .project-wrapper {
