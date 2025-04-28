@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         nextSlide() {
-            this.showSlides(this.currentIndex + 1);
+            this.showSlides(this.currentIndex - 1);
         }
 
         prevSlide() {
-            this.showSlides(this.currentIndex - 1);
+            this.showSlides(this.currentIndex + 1);
         }
 
         addEventListeners() {
@@ -125,4 +125,57 @@ const observer = new IntersectionObserver((entries) => {
 // Observe all elements with 'animated' class
 document.querySelectorAll('.animated').forEach((element) => {
     observer.observe(element);
+});
+
+// CODIGO DE PRUEBA PARA EL H-MENU MOVIL
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Create hamburger menu
+    const hamburger = document.createElement('div');
+    hamburger.className = 'hamburger-menu';
+    
+    // Create hamburger bars
+    for (let i = 0; i < 3; i++) {
+        const bar = document.createElement('div');
+        bar.className = `bar${i+1}`;
+        hamburger.appendChild(bar);
+    }
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
+    
+    // Get nav elements
+    const navLinks = document.querySelector('.nav-links');
+    const navWrapper = document.querySelector('.nav-wrapper');
+    
+    // Insert hamburger before nav links
+    navWrapper.insertBefore(hamburger, navLinks);
+    
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = hamburger.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    // Close menu when clicking on a link or overlay
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    overlay.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
 });

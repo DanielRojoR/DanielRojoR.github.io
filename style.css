@@ -854,3 +854,320 @@ footer {
         -webkit-transform: translateY(0px);
     }
 }
+
+/* ------------------------------ MEDIA QUERY ------------------------------ */
+
+/* ===== MEDIA QUERIES FOR RESPONSIVE DESIGN ===== */
+
+/* Small devices (phones) */
+@media screen and (max-width: 768px) {
+    /* ------ GENERAL ADJUSTMENTS ------ */
+    .section {
+        padding: 0px 20px;
+        height: auto;
+        min-height: 90vh;
+    }
+
+    .section-title-wrapper {
+        padding: 0px 20px;
+        margin: 40px 0px 10px 0px;
+    }
+
+    .section-wrapper {
+        flex-direction: column;
+    }
+
+    .section-left, .section-right {
+        width: 100%;
+    }
+
+    /* ------ NAVIGATION HAMBURGER MENU ------ */
+    .nav-wrapper {
+        margin: 0px 20px;
+        position: relative;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        z-index: 102;
+    }
+
+    .hamburger-menu div {
+        width: 30px;
+        height: 3px;
+        background-color: var(--primary-text-color);
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    /* Hamburger animation */
+    .hamburger-menu.active .bar1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger-menu.active .bar2 {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s ease-in-out;
+        z-index: 101;
+        box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links ul li {
+        margin: 15px 0;
+        width: 80%;
+    }
+
+    .nav-links ul li a {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    /* ------ SECTION 1 STYLES ------ */
+    .section-1 {
+        height: auto;
+        padding: 80px 0px 40px 0px;
+    }
+
+    .section-left-1 {
+        padding: 0px 20px;
+    }
+
+    .section-right-1 svg {
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    /* ------ SECTION 2 STYLES ------ */
+    .section-2 {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .section-left-2 {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .section-left-2 img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-right-2-top h1 {
+        margin: 20px 0px 40px 0px;
+        text-align: center;
+    }
+
+    .section-right-2-grid {
+        grid-template-columns: 60px;
+        grid-template-rows: 60px 60px 60px 60px 60px;
+        grid-gap: 8px;
+    }
+
+    .grid-item svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* ------ SECTION 4 STYLES ------ */
+    .section-4 {
+        padding: 0px 20px;
+    }
+
+    .section-wrapper-4 {
+        padding: 10px;
+    }
+
+    .project-container {
+        width: 100%;
+        height: auto;
+        min-height: 650px;
+        margin: 20px 0px;
+    }
+
+    .project-description-container {
+        max-height: 220px;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .project-tech-card {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    /* ------ SECTION 5 STYLES ------ */
+    .section-5 {
+        height: auto;
+    }
+
+    .section-wrapper-5 {
+        padding: 0px 20px;
+        flex-direction: column;
+    }
+
+    .section-left-5, .section-right-5 {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        margin: 20px 0px;
+        padding: 30px 20px;
+    }
+
+    .section-left-5 {
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    .section-right-5 {
+        border-radius: 0px 0px 20px 20px;
+    }
+
+    .form-container {
+        height: auto;
+    }
+
+    form input, form textarea {
+        width: 100%;
+    }
+
+    /* ------ FOOTER STYLES ------ */
+    footer {
+        padding: 0px 20px;
+        height: auto;
+        padding: 20px 0px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Medium devices (tablets) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .nav-wrapper, .section, .section-title-wrapper, .section-wrapper-5, footer {
+        padding: 0px 50px;
+    }
+
+    .section-2, .section-3 {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .section-left-2 {
+        padding: 0px 20px;
+    }
+
+    .project-container {
+        width: 450px;
+    }
+
+    .section-wrapper-5 {
+        flex-direction: column;
+    }
+
+    .section-left-5, .section-right-5 {
+        width: 100%;
+        border-radius: 20px;
+        margin: 20px 0px;
+    }
+}
+
+/* JavaScript for hamburger menu functionality */
+/* Add this to your main JS file */
+
+/* 
+document.addEventListener('DOMContentLoaded', function() {
+    // Get hamburger menu elements
+    const hamburger = document.createElement('div');
+    hamburger.className = 'hamburger-menu';
+    
+    // Create hamburger bars
+    for (let i = 0; i < 3; i++) {
+        const bar = document.createElement('div');
+        bar.className = `bar${i+1}`;
+        hamburger.appendChild(bar);
+    }
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    document.body.appendChild(overlay);
+    
+    // Get nav elements
+    const navLinks = document.querySelector('.nav-links');
+    const navWrapper = document.querySelector('.nav-wrapper');
+    
+    // Insert hamburger before nav links
+    navWrapper.insertBefore(hamburger, navLinks);
+    
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = hamburger.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    // Close menu when clicking on a link or overlay
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    overlay.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
+*/
