@@ -141,10 +141,10 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.appendChild(bar);
     }
     
-    // Create overlay
-    const overlay = document.createElement('div');
-    overlay.className = 'overlay';
-    document.body.appendChild(overlay);
+    // // Create overlay
+    // const overlay = document.createElement('div');
+    // overlay.className = 'overlay';
+    // document.body.appendChild(overlay);
     
     // Get nav elements
     const navLinks = document.querySelector('.nav-links');

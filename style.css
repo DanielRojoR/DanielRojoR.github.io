@@ -510,7 +510,8 @@ button:active {
   /* Each individual slide - takes up full width of the container */
   .slide {
     min-width: 100%; /* Each slide takes up 100% of the slider container's width */
-    height: 450px; /* Fixed height for each slide */
+    /* max-height: 450px; Fixed height for each slide */
+    height: 270px;
     transition: transform 0.5s ease-in-out; /* Smooth transition when slides are changed */
   }
   
@@ -862,6 +863,9 @@ footer {
 /* Small devices (phones) */
 @media screen and (max-width: 768px) {
     /* ------ GENERAL ADJUSTMENTS ------ */
+    * {
+        overflow-x: hidden;
+    }
     .section {
         padding: 0px 20px;
         height: auto;
@@ -968,16 +972,20 @@ footer {
     /* ------ SECTION 1 STYLES ------ */
     .section-1 {
         height: auto;
-        padding: 80px 0px 40px 0px;
+        padding: 60px 0px 40px 0px;
     }
 
     .section-left-1 {
         padding: 0px 20px;
     }
 
+    .section-left-1 button{
+        margin-bottom: 0;
+    }
+
     .section-right-1 svg {
         width: 90%;
-        margin-top: 30px;
+        margin-top:     0px;
     }
 
     /* ------ SECTION 2 STYLES ------ */
@@ -1002,9 +1010,10 @@ footer {
     }
 
     .section-right-2-grid {
-        grid-template-columns: 60px;
-        grid-template-rows: 60px 60px 60px 60px 60px;
-        grid-gap: 8px;
+        padding: 5px;
+        grid-template-columns: 50px;
+        grid-template-rows: 50px 50px 50px 50px 50px;
+        grid-gap: 4px;
     }
 
     .grid-item svg {
@@ -1012,6 +1021,10 @@ footer {
         height: 40px;
     }
 
+    .grid-1,  .grid-2, .grid-3, .grid-4, .grid-5{
+        margin-left: 2;
+        margin-right: 2;
+    }
     /* ------ SECTION 4 STYLES ------ */
     .section-4 {
         padding: 0px 20px;
@@ -1046,27 +1059,28 @@ footer {
 
     .section-wrapper-5 {
         padding: 0px 20px;
-        flex-direction: column;
-    }
-
-    .section-left-5, .section-right-5 {
-        width: 100%;
-        height: auto;
-        border-radius: 20px;
-        margin: 20px 0px;
-        padding: 30px 20px;
     }
 
     .section-left-5 {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        padding: 30px 20px;
         border-radius: 20px 20px 0px 0px;
     }
 
     .section-right-5 {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        padding: 30px 20px;
         border-radius: 0px 0px 20px 20px;
     }
 
     .form-container {
         height: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     form input, form textarea {
