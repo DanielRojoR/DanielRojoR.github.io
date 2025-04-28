@@ -302,13 +302,14 @@ button:active {
     width: 300px;
     height: 300px;
     border-radius: 20px;
-    border: var(--primary-text-color) 10px solid;
+    border: rgba(255, 255, 255, 0.15) 10px solid;
     box-shadow: 10px 10px 5px 1px rgba(0,0,0,0.3);
     transition: 100ms;
 }
 
 .section-left-2 img:hover {
     box-shadow: 14px 20px 8px 2px rgba(0,0,0,0.3);
+    border: rgba(255, 255, 255, 0.5) 10px solid;
     transform: translate(0px, -20px);
     transition: 100ms;
 }
@@ -689,7 +690,7 @@ button:active {
 }
 
 .section-left-5 h1{
-    padding: 0px 0px 50px 0px; 
+    padding: 0px 0px 20px 0px; 
 }
 
 .section-left-5 p{
@@ -886,13 +887,25 @@ footer {
     }
 
     /* ------ NAVIGATION HAMBURGER MENU ------ */
+
+    nav{
+        position: fixed; /* Change from sticky to fixed */
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        z-index: 100;
+    }
+
     .nav-wrapper {
         margin: 0px 20px;
         position: relative;
     }
 
     .hamburger-menu {
-        display: block;
+        position: fixed; /* Change from block to fixed */
+        top: 15px; /* Adjust this value to position the hamburger vertically */
+        right: 20px; /* Adjust this value to position the hamburger horizontally */
         cursor: pointer;
         z-index: 102;
     }
@@ -977,10 +990,12 @@ footer {
 
     .section-left-1 {
         padding: 0px 20px;
+        margin-top: 40px;
     }
 
     .section-left-1 button{
         margin-bottom: 0;
+        margin-top: 20px;
     }
 
     .section-right-1 svg {
@@ -1067,6 +1082,11 @@ footer {
         border-radius: 20px;
         padding: 30px 20px;
         border-radius: 20px 20px 0px 0px;
+        margin: 15px 0px 0px 0px;
+    }
+
+    .section-left-5 h1, p{
+        text-align: center;
     }
 
     .section-right-5 {
@@ -1075,6 +1095,7 @@ footer {
         border-radius: 20px;
         padding: 30px 20px;
         border-radius: 0px 0px 20px 20px;
+        margin: 0px 0px 60px 0px;
     }
 
     .form-container {
@@ -1083,8 +1104,9 @@ footer {
         flex-direction: column;
     }
 
-    form input, form textarea {
+    form input, form textarea, form button{
         width: 100%;
+        margin: 10px;
     }
 
     /* ------ FOOTER STYLES ------ */
