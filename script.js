@@ -10,6 +10,17 @@ document.addEventListener('DOMContentLoaded', function () {
             this.currentIndex = 0;
             this.updateDots();
             this.addEventListeners();
+
+            // Handle single image case
+            if (this.slides.length <= 1) {
+                if (this.prevBtn) this.prevBtn.style.display = 'none';
+                if (this.nextBtn) this.nextBtn.style.display = 'none';
+                this.dots.forEach(dot => dot.style.display = 'none');
+                return;
+            }
+
+            this.updateDots();
+            this.addEventListeners();
         }
 
         updateDots() {
