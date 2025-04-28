@@ -74,22 +74,55 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+        // Check if element is intersecting (visible)
         if (entry.isIntersecting) {
-            const animatedElements = document.querySelectorAll(".animated");
-            animatedElements.forEach((element, index) => {
-                if (index === 0) {
-                    element.classList.add("animation-fadeIn-left");
-                } else if (index === 1) {
-                    element.classList.add("animation-fadeIn-right");
-                }
-            });
+            const element = entry.target;
+            // Get the position of the element to determine animation
+            const position = Array.from(document.querySelectorAll('.animated')).indexOf(element);
+            
+            // Apply different animations based on position
+            switch(position % 10) {
+                case 0:
+                    element.classList.add('animation-fadeIn-left');
+                    break;
+                case 1:
+                    element.classList.add('animation-fadeIn-right');
+                    break;
+                case 2:
+                    element.classList.add('animation-fadeIn-top');
+                    break;
+                case 3:
+                    element.classList.add('animation-fadeIn-bot');
+                    break;
+                case 4:
+                    element.classList.add('animation-fadeIn-bot');
+                    break;
+                case 5:
+                    element.classList.add('animation-fadeIn-bot');
+                    break;
+                case 6:
+                    element.classList.add('animation-fadeIn-bot');
+                    break;
+                case 7:
+                    element.classList.add('animation-fadeIn-bot');
+                    break;
+                case 8:
+                    element.classList.add('animation-fadeIn-left');
+                    break;
+                case 9:
+                    element.classList.add('animation-fadeIn-right');
+                    break;
+            }
+            
+            // Stop observing after animation is added
+            observer.unobserve(element);
         }
     });
 }, {
-    threshold: 0.5 // Trigger when 50% of element is visible
+    threshold: 0.33 // Element is considered visible when 20% is in viewport
 });
 
-// Observe all elements with class 'main-wrapper'
-document.querySelectorAll(".main-wrapper").forEach(element => {
+// Observe all elements with 'animated' class
+document.querySelectorAll('.animated').forEach((element) => {
     observer.observe(element);
 });
