@@ -71,3 +71,25 @@ document.addEventListener('DOMContentLoaded', function () {
         new Carousel(container);
     });
 });
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const animatedElements = document.querySelectorAll(".animated");
+            animatedElements.forEach((element, index) => {
+                if (index === 0) {
+                    element.classList.add("animation-fadeIn-left");
+                } else if (index === 1) {
+                    element.classList.add("animation-fadeIn-right");
+                }
+            });
+        }
+    });
+}, {
+    threshold: 0.5 // Trigger when 50% of element is visible
+});
+
+// Observe all elements with class 'main-wrapper'
+document.querySelectorAll(".main-wrapper").forEach(element => {
+    observer.observe(element);
+});
