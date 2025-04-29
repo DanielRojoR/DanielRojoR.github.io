@@ -469,7 +469,7 @@ button:active {
 .project-container {
     opacity: 0;
     width: 500px;
-    height: 700px;
+    height: 670px;
     background-color: var(--secondary-color);
     border-radius:20px;
     top: 50%;
@@ -1024,11 +1024,15 @@ footer {
         text-align: center;
     }
 
+    .section-right-2-bottom {
+        padding: 0px 0px 20px 0px;
+    }
+
     .section-right-2-grid {
         padding: 5px;
         grid-template-columns: 50px;
         grid-template-rows: 50px 50px 50px 50px 50px;
-        grid-gap: 4px;
+        grid-gap: 1px;
     }
 
     .grid-item svg {
@@ -1036,9 +1040,18 @@ footer {
         height: 40px;
     }
 
-    .grid-1,  .grid-2, .grid-3, .grid-4, .grid-5{
-        margin-left: 2;
-        margin-right: 2;
+    .grid-item :hover {
+        transition: 100ms;
+        transform: scale(1) translateY(0px);
+        background-color: var(--secondary-color);
+    }
+
+    .grid-1, .grid-3, .grid-5{
+        margin: 0px 5px 20px 5px;
+    }
+
+    .grid-2, .grid-4{
+        margin: 20px 5px 0px 5px;
     }
     /* ------ SECTION 4 STYLES ------ */
     .section-4 {
@@ -1087,6 +1100,17 @@ footer {
 
     .section-left-5 h1, p{
         text-align: center;
+    }
+
+    .section-left-5 ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-left-5 ul li{
+        width: 32px;
     }
 
     .section-right-5 {
