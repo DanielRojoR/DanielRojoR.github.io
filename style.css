@@ -644,22 +644,19 @@ button:active {
     border-radius: 10px;
     font-size: 16px;
     font-weight: 550;
+    background-color: #25283D;
   }
   
-  .js {
-    background-color: #f0db4f;
-    color: #000;
+  /* .js {(--accent-color)221;
   }
-  
+
   .css {
-    background-color: #4457ff;
-    color: #fff;
+
   }
-  
+
   .html {
-    background-color: #ff8912;
-    color: #fff;
-  }
+
+  } */
 
 /* -- SECTION 5 STYLES --*/
 
@@ -686,7 +683,7 @@ button:active {
     background-color: var(--secondary-color);
     padding: 0px 80px;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .section-left-5 h1{
@@ -695,21 +692,42 @@ button:active {
 
 .section-left-5 p{
     font-size: 18px;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 60px 0px;
 }
 
 .section-left-5 ul{
+    width: auto;
     list-style: none;
     display: flex;
     justify-content: center;
 }
 
-.section-left-5 a{
+.section-left-5 ul li{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0px 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
     svg {
-        height: 32px;
-        max-width: 64px;
+        max-height: 32px;
+        max-width: 32px;
+        transition: 150ms;
+        fill: var(--primary-color);
     }
-    
+}
+
+.section-left-5 ul li:hover{
+    background-color: var(--primary-color);
+
+    svg {
+        fill: var(--accent-color);
+        transition: 150ms;
+    }
 }
 
 .section-right-5 {
@@ -1004,6 +1022,11 @@ footer {
     }
 
     /* ------ SECTION 2 STYLES ------ */
+
+    .section-2-title {
+        padding-top: 35px;
+    }
+
     .section-2 {
         height: auto;
         padding-bottom: 40px;
@@ -1019,7 +1042,14 @@ footer {
         height: 200px;
     }
 
+    .section-right-2-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .section-right-2-top h1 {
+        width: 75%;
         margin: 20px 0px 40px 0px;
         text-align: center;
     }
@@ -1040,11 +1070,12 @@ footer {
         height: 40px;
     }
 
-    .grid-item :hover {
+    .grid-item:hover{
         transition: 100ms;
-        transform: scale(1) translateY(0px);
+        transform: scale(1.1) translateY(0);
         background-color: var(--secondary-color);
     }
+    
 
     .grid-1, .grid-3, .grid-5{
         margin: 0px 5px 20px 5px;
@@ -1053,7 +1084,14 @@ footer {
     .grid-2, .grid-4{
         margin: 20px 5px 0px 5px;
     }
+
+
     /* ------ SECTION 4 STYLES ------ */
+
+    .section-4-title {
+        padding-top: 35px;
+    }
+
     .section-4 {
         padding: 0px 20px;
     }
@@ -1081,6 +1119,10 @@ footer {
     }
 
     /* ------ SECTION 5 STYLES ------ */
+
+    .section-5-title{
+        padding-top: 35px;
+    }
     .section-5 {
         height: auto;
     }
@@ -1110,7 +1152,33 @@ footer {
     }
 
     .section-left-5 ul li{
-        width: 32px;
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0px 5px;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.2);
+
+        svg {
+            max-height: 32px;
+            max-width: 32px;
+            transition: 150ms;
+            fill: var(--primary-color);
+        }
+    }
+
+
+    .section-left-5 ul li:hover{
+        background-color: var(--primary-color);
+
+        svg {
+            fill: var(--accent-color);
+            transition: 150ms;
+        }
     }
 
     .section-right-5 {
