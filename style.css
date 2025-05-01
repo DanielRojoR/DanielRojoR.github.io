@@ -467,6 +467,7 @@ button:active {
 }
 
 .project-container {
+    position: relative;
     opacity: 0;
     width: 500px;
     height: 670px;
@@ -592,9 +593,10 @@ button:active {
   
   .project-bottom-content-container {
     padding: 30px;
-    display: flex;
+    height: 100%;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
   }
   
   .project-title-container {
@@ -629,6 +631,11 @@ button:active {
     margin-bottom: 0px;
     overflow: hidden;
   }
+
+  .project-tech-labels {
+    position: absolute;
+    bottom: 40px;
+  }
   
   .project-tech-card-container {
     display: flex;
@@ -638,7 +645,7 @@ button:active {
   }
   
   .project-tech-card {
-    box-shadow: 10px 10px 10px 1px rgba(0,0,0,0.4);
+    /* box-shadow: 10px 10px 10px 1px rgba(0,0,0,0.4); */
     padding: 8px 10px;
     margin: 10px 10px;
     border-radius: 10px;
@@ -647,16 +654,65 @@ button:active {
     background-color: #25283D;
   }
   
-  /* .js {(--accent-color)221;
+  .js p{
+    color: #FFD52E;
+  }
+  .java p{
+    color: #f14c4d;
   }
 
-  .css {
-
+  .css p{
+    color: #2965f1;
   }
 
-  .html {
+  .html p {
+    color: #ff5733;
+  }
 
-  } */
+  .php p {
+    color: #787cb5;
+  }
+
+  .flutter p {
+    color: #1fbcfd;
+  }
+
+  .python p:nth-child(1){
+    display: inline;
+    color: #ffe873;
+  }
+
+  .python p:nth-child(2){
+    display: inline;
+    color: #306998;
+  }
+  .c p{
+    color: #659AD2;
+  }
+
+  .mysql p:nth-child(1) {
+    display: inline;
+    color: #00758f;
+  }
+  .mysql p:nth-child(2) {
+    display: inline;
+    color: #f29111;
+  }
+
+  .mongodb p:nth-child(1) {
+    display: inline;
+    color:#00ed64
+  }
+  .mongodb p:nth-child(2) {
+    display: inline;
+    color: #fff;
+  }
+
+  .firebase p{
+    color: #f5820d;
+  }
+
+
 
 /* -- SECTION 5 STYLES --*/
 
@@ -885,6 +941,10 @@ footer {
     * {
         overflow-x: hidden;
     }
+
+    .tooltip {
+        overflow: visible;
+    }
     .section {
         padding: 0px 20px;
         height: auto;
@@ -1032,6 +1092,20 @@ footer {
         padding-bottom: 40px;
     }
 
+    .tooltip .tooltiptext {
+        /* Ajustar posición para móviles */
+        width: 100px;
+        bottom: 120%;
+        left: 50%;
+        margin-left: -50px;
+        z-index: 1000;
+    }
+    
+    .grid-item:hover {
+        transform: scale(1.1);
+        background-color: var(--secondary-color);
+    }
+
     .section-left-2 {
         padding: 20px;
         margin-bottom: 30px;
@@ -1151,6 +1225,12 @@ footer {
         align-items: center;
     }
 
+    .section-left-5 ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .section-left-5 ul li{
         width: auto;
         height: auto;
@@ -1164,8 +1244,8 @@ footer {
         background-color: rgba(0, 0, 0, 0.2);
 
         svg {
-            max-height: 32px;
-            max-width: 32px;
+            max-height: 24px;
+            max-width: 24px;
             transition: 150ms;
             fill: var(--primary-color);
         }
