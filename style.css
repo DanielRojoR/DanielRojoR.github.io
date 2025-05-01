@@ -773,7 +773,7 @@ button:active {
         max-height: 32px;
         max-width: 32px;
         transition: 150ms;
-        fill: var(--primary-color);
+        fill: var(--primary-text-color);
     }
 }
 
@@ -938,9 +938,6 @@ footer {
 /* Small devices (phones) */
 @media screen and (max-width: 768px) {
     /* ------ GENERAL ADJUSTMENTS ------ */
-    * {
-        overflow-x: hidden;
-    }
 
     .tooltip {
         overflow: visible;
@@ -1247,7 +1244,7 @@ footer {
             max-height: 24px;
             max-width: 24px;
             transition: 150ms;
-            fill: var(--primary-color);
+            fill: var(--primary-text-color);
         }
     }
 
