@@ -33,6 +33,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
 .nav-wrapper {
@@ -718,7 +719,7 @@ button:active {
 
 .section-5 {
     background-color: var(--primary-color);
-    text-align: justify;
+    text-align: center;
 }
 
 .section-wrapper-5 {
@@ -934,7 +935,77 @@ footer {
 /* ------------------------------ MEDIA QUERY ------------------------------ */
 
 /* ===== MEDIA QUERIES FOR RESPONSIVE DESIGN ===== */
+@media screen and (max-width: 1360px) {
+    .section {
+        padding: 0px 50px;
+        height: auto;
+        min-height: 60vh;
+    }
 
+    .section-title-wrapper {
+        padding: 0px 100px;
+        margin: 90px 0px 10px 0px;
+    }
+
+    .nav-wrapper {
+        width: 100%;
+        height: 100%;
+        margin: 0px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* SECTION 1 */
+
+    .section-1 {
+        min-height: 40vh;
+    }
+
+    .section-1 button{
+        margin: 10px 0px 10px 0px;
+    }
+
+    .section-right-1 {
+        min-height: 40vh;
+    }
+
+    /* SECTION-2 */
+
+
+    .section-left-2 img{
+        height: 250px;
+        width: 250px;
+    }
+
+    .section-left-2 h1{
+
+    }
+
+    .section-left-2 p{
+        font-size: 18px;
+    }
+
+    .section-right-2-top h1{
+        margin: 0px 0px 40px 0px;
+    }
+
+    /* SECTION-4 */
+
+    .section-wrapper-4 {
+        padding: 0px;
+    }
+
+    /* SECTION-5 */
+
+    .section-wrapper-5 {
+        padding: 0px 50px;
+    }
+
+    .section-left-5 {
+        text-align:center;
+    }
+}
 /* Small devices (phones) */
 @media screen and (max-width: 768px) {
     /* ------ GENERAL ADJUSTMENTS ------ */
@@ -1292,7 +1363,7 @@ footer {
 }
 
 /* Medium devices (tablets) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
     .nav-wrapper, .section, .section-title-wrapper, .section-wrapper-5, footer {
         padding: 0px 50px;
     }
@@ -1319,60 +1390,4 @@ footer {
         border-radius: 20px;
         margin: 20px 0px;
     }
-}
-
-/* JavaScript for hamburger menu functionality */
-/* Add this to your main JS file */
-
-/* 
-document.addEventListener('DOMContentLoaded', function() {
-    // Get hamburger menu elements
-    const hamburger = document.createElement('div');
-    hamburger.className = 'hamburger-menu';
-    
-    // Create hamburger bars
-    for (let i = 0; i < 3; i++) {
-        const bar = document.createElement('div');
-        bar.className = `bar${i+1}`;
-        hamburger.appendChild(bar);
-    }
-    
-    // Create overlay
-    const overlay = document.createElement('div');
-    overlay.className = 'overlay';
-    document.body.appendChild(overlay);
-    
-    // Get nav elements
-    const navLinks = document.querySelector('.nav-links');
-    const navWrapper = document.querySelector('.nav-wrapper');
-    
-    // Insert hamburger before nav links
-    navWrapper.insertBefore(hamburger, navLinks);
-    
-    // Toggle menu on hamburger click
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        overlay.classList.toggle('active');
-        document.body.style.overflow = hamburger.classList.contains('active') ? 'hidden' : '';
-    });
-    
-    // Close menu when clicking on a link or overlay
-    const links = navLinks.querySelectorAll('a');
-    links.forEach(link => {
-        link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
-    
-    overlay.addEventListener('click', function() {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-    });
-});
-*/
+} */
