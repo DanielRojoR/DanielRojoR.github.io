@@ -476,7 +476,7 @@ button:active {
     border-radius:20px;
     top: 50%;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for depth */
-    margin: 25px 5px;
+    margin: 25px 50px;
   }
   
   .project-wrapper {
@@ -631,6 +631,10 @@ button:active {
     height: 180px;
     margin-bottom: 0px;
     overflow: hidden;
+  }
+
+    .project-description-container p{
+    font-size: 18px;
   }
 
   .project-tech-labels {
