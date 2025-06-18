@@ -1,7 +1,7 @@
 :root{
     --primary-color: #25283D;
     --secondary-color: #5C677D;
-    --accent-color: #C03221;
+    --accent-color: #59236e;
     --primary-text-color: #fff;
     --secondary-text-color: #25283D;
 }
@@ -26,7 +26,7 @@ body {
 
 nav {
     background-color: var(--primary-color);
-    height: 70px;
+    height: 70px;   
     width: 100%;
     display: flex;
     align-items: center;
